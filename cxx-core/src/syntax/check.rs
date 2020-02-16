@@ -3,7 +3,7 @@ use crate::syntax::{error, ident, Api, ExternFn, Ty1, Type, Types, Var};
 use proc_macro2::Ident;
 use syn::{Error, Result};
 
-pub(crate) fn typecheck(apis: &[Api], types: &Types) -> Result<()> {
+pub fn typecheck(apis: &[Api], types: &Types) -> Result<()> {
     let mut errors = Vec::new();
 
     for ty in types {

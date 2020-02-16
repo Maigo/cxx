@@ -1,4 +1,4 @@
-#include "../include/cxxbridge.h"
+#include "include/cxxbridge.h"
 #include <cstring>
 #include <memory>
 #include <stdexcept>

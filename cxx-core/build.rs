@@ -4,5 +4,5 @@ fn main() {
         .flag("-std=c++11")
         .compile("cxxbridge01");
     println!("cargo:rerun-if-changed=src/cxxbridge.cc");
-    println!("cargo:rerun-if-changed=include/cxxbridge.h");
+    println!("cargo:rerun-if-changed=src/include/cxxbridge.h");
 }

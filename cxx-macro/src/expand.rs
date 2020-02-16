@@ -1,6 +1,6 @@
 use crate::namespace::Namespace;
-use crate::syntax::atom::Atom;
-use crate::syntax::{self, check, Api, ExternFn, ExternType, Struct, Type, Types, Var};
+use cxxbridge_core::syntax::atom::Atom;
+use cxxbridge_core::syntax::{self, check, Api, ExternFn, ExternType, Struct, Type, Types, Var};
 use proc_macro2::{Ident, Span, TokenStream};
 use quote::{format_ident, quote, quote_spanned};
 use syn::{Error, ItemMod, Result, Token};

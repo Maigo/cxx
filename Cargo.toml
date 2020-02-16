@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "cxx",
+    "cxx-cmd",
+    "cxx-core",
+    "cxx-macro",
+]

@@ -10,9 +10,9 @@ extern crate proc_macro;
 
 mod expand;
 mod namespace;
-mod syntax;
 
 use crate::namespace::Namespace;
+use cxxbridge_core::syntax;
 use proc_macro::TokenStream;
 use syn::{parse_macro_input, ItemMod};
 

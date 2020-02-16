@@ -1,6 +1,6 @@
 use std::fmt::{self, Arguments, Write};
 
-pub(crate) struct OutFile {
+pub struct OutFile {
     pub namespace: Vec<String>,
     pub header: bool,
     content: Vec<u8>,

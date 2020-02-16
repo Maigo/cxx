@@ -14,9 +14,10 @@ proc-macro = true
 travis-ci = { repository = "dtolnay/cxx" }
 
 [dependencies]
+cxxbridge-core = { version = "=0.1.2", path = "../cxx-core" }
 proc-macro2 = "1.0"
 quote = "1.0"
 syn = { version = "1.0", features = ["full"] }
 
 [dev-dependencies]
-cxx = { version = "0.1", path = ".." }
+cxxbridge-core = { version = "=0.1.2", path = "../cxx-core" }

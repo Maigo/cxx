@@ -1,15 +1,16 @@
 [package]
-name = "cxxbridge-cmd"
+name = "cxxbridge-core"
 version = "0.1.2"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 edition = "2018"
+links = "cxxbridge01"
 license = "MIT OR Apache-2.0"
 description = "C++ code generator for integrating `cxx` crate into a non-Cargo build."
 repository = "https://github.com/dtolnay/cxx"
 
-[[bin]]
-name = "cxxbridge"
-path = "src/main.rs"
+[lib]
+#name = "cxxbridgecore"
+path = "src/lib.rs"
 
 [badges]
 travis-ci = { repository = "dtolnay/cxx" }
@@ -18,9 +19,11 @@ travis-ci = { repository = "dtolnay/cxx" }
 anyhow = "1.0"
 codespan = "0.7"
 codespan-reporting = "0.7"
-cxxbridge-core = { version = "=0.1.2", path = "../cxx-core" }
 proc-macro2 = { version = "1.0", features = ["span-locations"] }
 quote = "1.0"
 structopt = "0.3"
 syn = { version = "1.0", features = ["full"] }
 thiserror = "1.0"
+
+[build-dependencies]
+cc = "1.0.49"

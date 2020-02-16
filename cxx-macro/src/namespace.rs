@@ -1,4 +1,4 @@
-use crate::syntax::ident;
+use cxxbridge_core::syntax::ident;
 use std::fmt::{self, Display};
 use syn::parse::{Parse, ParseStream, Result};
 use syn::{Path, Token};

@@ -2,7 +2,7 @@ use crate::syntax::{error, Api};
 use proc_macro2::Ident;
 use syn::{Error, Result};
 
-pub(crate) fn check(ident: &Ident) -> Result<()> {
+pub fn check(ident: &Ident) -> Result<()> {
     let s = ident.to_string();
     if s.contains("__") {
         Err(Error::new(ident.span(), error::DOUBLE_UNDERSCORE.msg))

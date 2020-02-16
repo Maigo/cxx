@@ -1,7 +1,4 @@
-mod gen;
-mod syntax;
-
-use gen::include;
+use cxxbridge_core::gen;
 use std::io::{self, Write};
 use std::path::PathBuf;
 use structopt::StructOpt;
@@ -38,7 +35,7 @@ fn main() {
     match (opt.input, opt.header) {
         (Some(input), true) => write(gen::do_generate_header(&input)),
         (Some(input), false) => write(gen::do_generate_bridge(&input)),
-        (None, true) => write(include::HEADER),
+        (None, true) => write(gen::include::HEADER),
         (None, false) => unreachable!(), // enforced by required_unless
     }
 }

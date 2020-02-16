@@ -2,7 +2,7 @@
 // the cmd.
 
 mod error;
-pub(super) mod include;
+pub mod include;
 pub(super) mod out;
 mod write;
 
@@ -36,12 +36,12 @@ struct Input {
     module: Vec<Item>,
 }
 
-pub(super) fn do_generate_bridge(path: &Path) -> OutFile {
+pub fn do_generate_bridge(path: &Path) -> OutFile {
     let header = false;
     generate(path, header)
 }
 
-pub(super) fn do_generate_header(path: &Path) -> OutFile {
+pub fn do_generate_header(path: &Path) -> OutFile {
     let header = true;
     generate(path, header)
 }

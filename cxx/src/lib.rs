@@ -346,12 +346,10 @@ extern crate link_cplusplus;
 
 mod cxx_string;
 mod error;
-mod gen;
 mod opaque;
 mod paths;
 mod rust_str;
 mod rust_string;
-mod syntax;
 mod unique_ptr;
 mod unwind;
 
@@ -370,6 +368,7 @@ pub mod private {
 }
 
 use crate::error::Result;
+use cxxbridge_core::gen;
 use anyhow::anyhow;
 use std::fs;
 use std::io::{self, Write};
